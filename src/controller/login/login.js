@@ -1,6 +1,6 @@
 import fs from "fs"
 
-export const login = (req,res) => {
+export const login = (req,res,next) => {
      const {firstName,lastName,password} = req.body
      const rawUserData = fs.readFileSync("src/db/users.json")
      const users = JSON.parse(rawUserData)

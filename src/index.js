@@ -1,6 +1,6 @@
-// const express = import('express')
 import express from 'express'
-import { userRouter } from './router/users-router.js'
+// import { userRouter } from './router/users-router.js'
+import { authRouter } from './router/auth.js'
 
 const app = express()
 const port = 3000
@@ -8,7 +8,8 @@ const port = 3000
 
 app.use(express.json())
 
-app.use("/users", userRouter)
+// app.use("/users", userRouter)
+app.use("/auth",authRouter)
 
 
 app.listen(port, () => {
